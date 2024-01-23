@@ -6,8 +6,12 @@ In the future, expected outputs or measurements might be added.
 
 ## PyPulseq Example Sequences
 
-The corresponding folder contains all example files provided by [pypulseq](https://github.com/imr-framework/pypulseq) 1.2, 1.3 and 1.4. Execute generate.py to create all .seq files. This script will create a new virtual python environment in which the corresponding pypulseq versions are installed to avoid modifying the python installation on your system.
+All example .seq files provided by [pypulseq](https://github.com/imr-framework/pypulseq) 1.2, 1.3 and 1.4 are included. To generate them, execute `generate.py`. This script will create a new virtual python environment in which the corresponding pypulseq versions are installed to avoid modifying the python installation on your system. The output files are written to `pypulseq/<version>/`.
 
-```console
-> python pypulseq/generate/generate.py
 ```
+python pypulseq/generate/generate.py
+```
+
+## Single-shot Spiral TSE
+
+The included `spiral-TSE/ssTSE.seq` is an output of [Jürgen Hennig's single-shot-spiral-TSE](https://github.com/HennigJue/single-shot-spiral-TSE). The code provides multiple sequence options, in the future more .seq files might be included for different settings.
