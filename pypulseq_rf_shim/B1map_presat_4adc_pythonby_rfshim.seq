@@ -1,0 +1,114 @@
+# Pulseq sequence file
+# Created by PyPulseq
+
+[VERSION]
+major 1
+minor 3
+revision 90
+
+[DEFINITIONS]
+pulse_mode CP_EP 
+b0 7 
+n_pulses 1 
+tp 0.001 
+trec 4 
+seq_id_string B1map_presat_4adc_python 
+spoiling 1 
+B1map_info 4adcs_CP_0deg_70deg_EP_0deg_70deg 
+freq 298.0348 
+
+# Format of blocks:
+#  #  D RF  GX  GY  GZ ADC EXT
+[BLOCKS]
+ 1  1  0   0   0   0  0  0
+ 2  0  0   1   1   1  0  0
+ 3  0  0   0   0   0  1  0
+ 4  1  0   0   0   0  0  0
+ 5  0  1   0   0   0  0  0
+ 6  0  0   1   1   1  0  0
+ 7  0  0   0   0   0  1  0
+ 8  1  0   0   0   0  0  0
+ 9  0  0   1   1   1  0  0
+10  0  0   0   0   0  1  0
+11  1  0   0   0   0  0  0
+12  0  2   0   0   0  0  0
+13  0  0   1   1   1  0  0
+14  0  0   0   0   0  1  0
+
+# Format of RF events:
+# id amplitude mag_id phase_id delay freq phase shim_mag_ID shim_phase_ID
+# ..        Hz   ....     ....    us   Hz   rad   ....   ....
+[RF]
+1      97.2222 1 2 100 0 0 3 4
+2      97.2222 1 2 100 0 0 3 5
+
+# Format of trapezoid gradients:
+# id amplitude rise flat fall delay
+# ..      Hz/m   us   us   us    us
+[TRAP]
+ 1  1.36244e+06 1000 4500 1000   0
+
+# Format of ADC events:
+# id num dwell delay freq phase
+# ..  ..    ns    us   Hz   rad
+[ADC]
+1 1 1000000 0 0 0
+
+# Format of delays:
+# id delay (us)
+[DELAYS]
+1 4000000
+
+# Sequence Shapes
+[SHAPES]
+
+shape_id 1
+num_samples 2030
+1
+0
+0
+1997
+-1
+0
+0
+27
+
+shape_id 2
+num_samples 2030
+0
+0
+2028
+
+shape_id 3
+num_samples 8
+0.35
+0.35
+0.35
+0.35
+0.35
+0.35
+0.35
+0.35
+
+shape_id 4
+num_samples 8
+0
+-0.785398163
+-1.57079633
+-2.35619449
+-3.14159265
+2.35619449
+1.57079633
+0.785398163
+
+shape_id 5
+num_samples 8
+0
+-1.57079633
+3.14159265
+1.57079633
+0
+-1.57079633
+-3.14159265
+1.57079633
+
